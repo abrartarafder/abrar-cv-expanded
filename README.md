@@ -1,4 +1,4 @@
 # Responsive CV
 
 ## Abrar Responsive and Expanded CV
-- Expanded CV (not resume)
+- Expanded CV (includes resume)
