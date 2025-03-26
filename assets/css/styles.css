@@ -158,6 +158,7 @@ body.scale-cv {
 .scale-cv .education__time,
 .scale-cv .experience__time {
   padding-right: 0.5rem;
+
 }
 
 .scale-cv .education__rounder,
@@ -448,6 +449,7 @@ img {
 .education__time,
 .experience__time {
   padding-right: 1rem;
+  
 }
 
 .education__rounder,
@@ -483,12 +485,13 @@ img {
 .education__title,
 .experience__title {
   font-size: var(--h3-font-size);
+  color: var(--text-color);
 }
 
 .education__studies,
 .experience__company {
   font-size: var(--small-font-size);
-  color: var(--title-color);
+  color: var(--text-color);
 }
 
 .external-link {
@@ -523,12 +526,15 @@ img {
   flex-wrap: wrap;
   flex-direction: row;
   gap: 0.5rem;
+  margin-top: 1rem;
 }
 
 .experience__technologies-item {
   padding: 0.1rem 0.3rem;
   background-color: var(--container-color-alt);
   border-radius: 0.4rem;
+  border-color: var(--title-color);
+  color: var(--title-color);
 }
 
 .education__year {
@@ -696,11 +702,12 @@ img {
 
 .certificate__title {
   font-size: var(--h3-font-size);
+  color: var(--text-color);
 }
 
 .certificate__company {
   font-size: var(--smaller-font-size);
-  color: var(--title-color);
+  color: var(--text-color);
 }
 
 /*========== REFERENCES ==========*/
