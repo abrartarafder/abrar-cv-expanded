@@ -1,152 +1,135 @@
-/*==================== SHOW MENU ====================*/
-const showMenu = (toggleId, navId) => {
-    const toggle = document.getElementById(toggleId),
-        nav = document.getElementById(navId)
+const navToggle = document.getElementById('nav-toggle');
+const navMenu = document.getElementById('nav-menu');
+const navLinks = [...document.querySelectorAll('.nav__link')];
 
-    // Validate that variables exist
-    if (toggle && nav) {
-        toggle.addEventListener('click', () => {
-            // We add the show-menu class to the div tag with the nav__menu class
-            nav.classList.toggle('show-menu')
-        })
+function closeMenu() {
+    navMenu.classList.remove('show-menu');
+    navToggle.setAttribute('aria-expanded', 'false');
+    navToggle.setAttribute('aria-label', 'Open navigation');
+}
+
+navToggle.addEventListener('click', () => {
+    const isOpen = navMenu.classList.toggle('show-menu');
+    navToggle.setAttribute('aria-expanded', String(isOpen));
+    navToggle.setAttribute('aria-label', isOpen ? 'Close navigation' : 'Open navigation');
+});
+
+navLinks.forEach(link => link.addEventListener('click', closeMenu));
+document.addEventListener('keydown', event => {
+    if (event.key === 'Escape' && navMenu.classList.contains('show-menu')) {
+        closeMenu();
+        navToggle.focus();
     }
-}
-showMenu('nav-toggle', 'nav-menu')
+});
+document.addEventListener('click', event => {
+    if (!event.target.closest('#header')) closeMenu();
+});
 
-/*==================== REMOVE MENU MOBILE ====================*/
-const navLink = document.querySelectorAll('.nav__link')
+// Read the saved theme when storage is available; the toggle also works without it.
+const themeButton = document.getElementById('theme-button');
+const themeIcon = themeButton.querySelector('i');
+const colorPreference = window.matchMedia('(prefers-color-scheme: dark)');
+let savedTheme;
 
-function linkAction() {
-    const navMenu = document.getElementById('nav-menu')
-    // When we click on each nav__link, we remove the show-menu class
-    navMenu.classList.remove('show-menu')
-}
-navLink.forEach(n => n.addEventListener('click', linkAction))
-
-/*==================== SCROLL SECTIONS ACTIVE LINK ====================*/
-const sections = document.querySelectorAll('section[id]')
-
-function scrollActive() {
-    const scrollY = window.pageYOffset
-
-    sections.forEach(current => {
-        const sectionHeight = current.offsetHeight
-        const sectionTop = current.offsetTop - 50;
-        sectionId = current.getAttribute('id')
-
-        if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
-            document.querySelector('.nav__menu a[href*=' + sectionId + ']').classList.add('active-link')
-        } else {
-            document.querySelector('.nav__menu a[href*=' + sectionId + ']').classList.remove('active-link')
-        }
-    })
-}
-window.addEventListener('scroll', scrollActive)
-
-/*==================== SHOW SCROLL TOP ====================*/
-function scrollTop() {
-    const scrollTop = document.getElementById('scroll-top');
-    // When the scroll is higher than 560 viewport height, add the show-scroll class to the a tag with the scroll-top class
-    if (this.scrollY >= 200) scrollTop.classList.add('show-scroll'); else scrollTop.classList.remove('show-scroll')
-}
-window.addEventListener('scroll', scrollTop)
-
-/*==================== DARK LIGHT THEME ====================*/
-const themeButton = document.getElementById('theme-button')
-const darkTheme = 'dark-theme'
-const iconTheme = 'bx-sun'
-
-// Previously selected topic (if user selected)
-const selectedTheme = localStorage.getItem('selected-theme')
-const selectedIcon = localStorage.getItem('selected-icon')
-
-// We obtain the current theme that the interface has by validating the dark-theme class
-const getCurrentTheme = () => document.body.classList.contains(darkTheme) ? 'dark' : 'light'
-const getCurrentIcon = () => themeButton.classList.contains(iconTheme) ? 'bx-moon' : 'bx-sun'
-
-// We validate if the user previously chose a topic
-if (selectedTheme) {
-    // If the validation is fulfilled, we ask what the issue was to know if we activated or deactivated the dark
-    document.body.classList[selectedTheme === 'dark' ? 'add' : 'remove'](darkTheme)
-    themeButton.classList[selectedIcon === 'bx-moon' ? 'add' : 'remove'](iconTheme)
+try {
+    savedTheme = localStorage.getItem('selected-theme');
+} catch {
+    // Some private browsing and embedded contexts restrict local storage.
 }
 
-// Activate / deactivate the theme manually with the button
+function applyTheme(isDark) {
+    document.body.classList.toggle('dark-theme', isDark);
+    themeIcon.classList.toggle('bx-sun', isDark);
+    themeIcon.classList.toggle('bx-moon', !isDark);
+    themeButton.setAttribute('aria-pressed', String(isDark));
+    themeButton.setAttribute('aria-label', `Switch to ${isDark ? 'light' : 'dark'} theme`);
+    themeButton.title = `Switch to ${isDark ? 'light' : 'dark'} theme`;
+}
+
+applyTheme(savedTheme === 'dark' || (savedTheme !== 'light' && colorPreference.matches));
+
 themeButton.addEventListener('click', () => {
-    // Add or remove the dark / icon theme
-    document.body.classList.toggle(darkTheme)
-    themeButton.classList.toggle(iconTheme)
-    // We save the theme and the current icon that the user chose
-    localStorage.setItem('selected-theme', getCurrentTheme())
-    localStorage.setItem('selected-icon', getCurrentIcon())
-})
-
-/*==================== SEE MORE ====================*/
-// Skills
-const skillsButton = document.getElementById('skills-button')
-const skillsSection = document.getElementById('skills');
-const skillsItems = document.querySelectorAll('.skills__name.showmore');
-
-skillsButton.addEventListener('click', (e) => {
-    e.preventDefault();
-    if (skillsSection.classList.contains("show"))
-        skillsButton.innerText = "See More"
-    else skillsButton.innerText = "See Less"
-    skillsSection.classList.toggle('show');
-    skillsSection.classList.toggle('hide');
-    skillsItems.forEach(item => {
-        item.classList.toggle('hide')
-        item.classList.toggle('show')
-    })
-})
-
-//Education Awards
-const educationAwardButton = document.getElementById('icpc__award-button')
-const educationAward = document.getElementById('icpc__award');
-
-educationAwardButton.addEventListener('click', (e) => {
-    e.preventDefault();
-    if (educationAwardButton.innerText == "See More") {
-        educationAward.classList.add('show');
-        educationAwardButton.innerText = "See Less"
-    } else {
-        educationAward.classList.remove('show');
-        educationAwardButton.innerText = "See More"
+    const isDark = !document.body.classList.contains('dark-theme');
+    applyTheme(isDark);
+    savedTheme = isDark ? 'dark' : 'light';
+    try {
+        localStorage.setItem('selected-theme', savedTheme);
+    } catch {
+        // Keep the current theme usable even when it cannot be persisted.
     }
-})
+});
 
-/*==================== REDUCE THE SIZE AND PRINT ON AN A4 SHEET ====================*/
-// function scaleCv() {
-//     document.body.classList.add('scale-cv')
-// }
+colorPreference.addEventListener('change', event => {
+    if (savedTheme !== 'light' && savedTheme !== 'dark') applyTheme(event.matches);
+});
 
-/*==================== REMOVE THE SIZE WHEN THE CV IS DOWNLOADED ====================*/
-// function removeScale() {
-//     document.body.classList.remove('scale-cv')
-// }
+const skillsButton = document.getElementById('skills-button');
+const moreSkills = document.getElementById('more-skills');
+moreSkills.hidden = true;
+skillsButton.hidden = false;
 
-/*==================== GENERATE PDF ====================*/
-// PDF generated area
-// let areaCv = document.getElementById('area-cv')
-// let resumeButton = document.getElementById('resume-button')
+skillsButton.addEventListener('click', () => {
+    moreSkills.hidden = !moreSkills.hidden;
+    skillsButton.setAttribute('aria-expanded', String(!moreSkills.hidden));
+    skillsButton.textContent = moreSkills.hidden ? 'More tools' : 'Fewer tools';
+});
 
-// Html2pdf options
-// let opt = {
-//     margin: 1,
-//     filename: 'cv-frank-siret',
-//     image: { type: 'jpeg', quality: 0.98 },
-//     html2canvas: { scale: 4 },
-//     jsPDF: { format: 'a4', orientation: 'portrait' }
-// }
+// Only track sections represented in navigation, including sections in either column.
+const linkedSections = navLinks.map(link => ({
+    link,
+    section: document.querySelector(link.getAttribute('href'))
+})).filter(item => item.section);
+const scrollTopLink = document.getElementById('scroll-top');
 
-// Function to call areaCv and Html2Pdf options 
-// function generateResume() {
-//     html2pdf().set(opt).from(areaCv).save();
-// }
+function updateScrollState() {
+    const readingLine = 100;
+    let activeItem;
+    let nearestDistance = Infinity;
 
-// When the button is clicked, it executes the three functions
-// resumeButton.addEventListener('click', () => {
-//     scaleCv()
-//     setTimeout(generateResume, 2500)
-//     setTimeout(removeScale, 2500)
-// })
+    linkedSections.forEach(item => {
+        const bounds = item.section.getBoundingClientRect();
+        if (bounds.top <= readingLine && bounds.bottom > readingLine) {
+            const distance = Math.abs(bounds.top - readingLine);
+            if (distance < nearestDistance) {
+                activeItem = item;
+                nearestDistance = distance;
+            }
+        }
+    });
+
+    linkedSections.forEach(item => {
+        const isActive = item === activeItem;
+        item.link.classList.toggle('active-link', isActive);
+        if (isActive) item.link.setAttribute('aria-current', 'location');
+        else item.link.removeAttribute('aria-current');
+    });
+
+    scrollTopLink.classList.toggle('show-scroll', window.scrollY >= 200);
+}
+
+let scrollPending = false;
+window.addEventListener('scroll', () => {
+    if (scrollPending) return;
+    scrollPending = true;
+    requestAnimationFrame(() => {
+        updateScrollState();
+        scrollPending = false;
+    });
+}, { passive: true });
+window.addEventListener('resize', () => {
+    if (window.innerWidth >= 968) closeMenu();
+    updateScrollState();
+});
+
+// A printed CV includes every role and tool, then restores the screen view.
+let printDetails = [];
+window.addEventListener('beforeprint', () => {
+    printDetails = [...document.querySelectorAll('details:not([open])')];
+    printDetails.forEach(details => { details.open = true; });
+});
+window.addEventListener('afterprint', () => {
+    printDetails.forEach(details => { details.open = false; });
+    printDetails = [];
+    updateScrollState();
+});
+updateScrollState();

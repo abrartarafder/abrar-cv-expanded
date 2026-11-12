@@ -1,1077 +1,567 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!--========== BOX ICONS ==========-->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
-
-    <!--========== CSS ==========-->
+    <meta name="description" content="Abrar Jawad Tarafder’s expanded CV: software development, database engineering, automation, education, and projects.">
+    <meta name="color-scheme" content="light dark">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@2.1.4/css/boxicons.min.css">
     <link rel="stylesheet" href="assets/css/styles.css">
     <link rel="icon" href="assets/img/favicon.ico">
-    <title>CV - Abrar</title>
+    <title>Abrar Jawad Tarafder | CV</title>
 </head>
-
 <body>
-    <!--========== HEADER ==========-->
-    <header class=" l-header" id="header">
-        <nav class="nav bd-container">
-            <a href="#" class="nav__logo">AT</a>
-
+    <a href="#main-content" class="skip-link">Skip to CV</a>
+    <header class="l-header" id="header">
+        <nav class="nav bd-container" aria-label="CV sections">
+            <a href="#experience" class="nav__quick-link"><i class="bx bx-briefcase-alt" aria-hidden="true"></i>Experience</a>
             <div class="nav__menu" id="nav-menu">
                 <ul class="nav__list">
-                    <li class="nav__item">
-                        <a href="#home" class="nav__link">
-                            <i class='bx bx-home nav__icon'></i>Home
-                        </a>
-                    </li>
-
-                    <li class="nav__item">
-                        <a href="#profile" class="nav__link">
-                            <i class='bx bx-user nav__icon'></i>Profile
-                        </a>
-                    </li>
-
-                    <li class="nav__item">
-                        <a href="#education" class="nav__link">
-                            <i class='bx bx-book nav__icon'></i>Education
-                        </a>
-                    </li>
-
-                    <li class="nav__item">
-                        <a href="#skills" class="nav__link">
-                            <i class='bx bx-receipt nav__icon'></i>Skills
-                        </a>
-                    </li>
-
-                    <li class="nav__item">
-                        <a href="#experience" class="nav__link">
-                            <i class='bx bx-briefcase-alt nav__icon'></i>Experience
-                        </a>
-                    </li>
-
-                    <li class="nav__item">
-                        <a href="#certificates" class="nav__link">
-                            <i class='bx bx-award nav__icon'></i>Certificates
-                        </a>
-                    </li>
-
-                    <!-- <li class="nav__item">
-                        <a href="#references" class="nav__link">
-                            <i class='bx bx-link-external nav__icon'></i>References
-                        </a>
-                    </li> -->
+                    <li class="nav__item"><a href="#home" class="nav__link"><i class="bx bx-home nav__icon" aria-hidden="true"></i>Home</a></li>
+                    <li class="nav__item"><a href="#profile" class="nav__link"><i class="bx bx-user nav__icon" aria-hidden="true"></i>Profile</a></li>
+                    <li class="nav__item"><a href="#education" class="nav__link"><i class="bx bx-book nav__icon" aria-hidden="true"></i>Education</a></li>
+                    <li class="nav__item"><a href="#skills" class="nav__link"><i class="bx bx-code-alt nav__icon" aria-hidden="true"></i>Skills</a></li>
+                    <li class="nav__item"><a href="#experience" class="nav__link"><i class="bx bx-briefcase-alt nav__icon" aria-hidden="true"></i>Experience</a></li>
+                    <li class="nav__item"><a href="#volunteering" class="nav__link"><i class="bx bx-group nav__icon" aria-hidden="true"></i>Volunteering</a></li>
+                    <li class="nav__item"><a href="#projects" class="nav__link"><i class="bx bx-folder-open nav__icon" aria-hidden="true"></i>Projects</a></li>
+                    <li class="nav__item"><a href="#certificates" class="nav__link"><i class="bx bx-award nav__icon" aria-hidden="true"></i>Certificates</a></li>
+                    <li class="nav__item"><a href="#courses" class="nav__link"><i class="bx bx-book-open nav__icon" aria-hidden="true"></i>Courses</a></li>
                 </ul>
             </div>
-
-            <div class="nav__toggle" id="nav-toggle">
-                <i class='bx bx-grid-alt'></i>
-            </div>
+            <button type="button" class="nav__toggle" id="nav-toggle" aria-label="Open navigation" aria-controls="nav-menu" aria-expanded="false"><i class="bx bx-grid-alt" aria-hidden="true"></i><span>Sections</span></button>
         </nav>
     </header>
 
-    <main class="l-main bd-container">
-        <!-- All elements within this div, is generated in PDF -->
+    <main class="l-main bd-container" id="main-content" tabindex="-1">
         <div class="resume" id="area-cv">
             <div class="resume__left">
-                <!--========== HOME ==========-->
-                <section class="home" id="home">
+                <section class="home" id="home" aria-labelledby="cv-name">
+                    <div class="home__controls"><button type="button" class="change-theme" title="Switch to dark theme" id="theme-button" aria-label="Switch to dark theme" aria-pressed="false"><i class="bx bx-moon" aria-hidden="true"></i></button></div>
                     <div class="home__container section bd-grid">
                         <div class="home__data bd-grid">
-                            <img src="assets/img/IMG_7514 2.jpg" alt="" class="home__img">
-
-                            <h1 class="home__title">ABRAR JAWAD TARAFDER</b></h1>
-
-                            <h3 class="home__profession">CS Student @ York University</h3>
-
-                            <div>
-                                <a download="" href="assets/pdf/Resume_Abrar_JT.pdf" target="_blank"
-                                    class="home__button-movil">Resume</a>
+                            <img src="assets/img/IMG_7514%202.jpg" alt="Abrar Jawad Tarafder" width="120" height="120" class="home__img">
+                            <p class="home__eyebrow">Expanded CV</p>
+                            <h1 class="home__title" id="cv-name">ABRAR JAWAD TARAFDER</h1>
+                            <p class="home__profession">Computer Science Graduate<br>York University</p>
+                            <div class="home__actions">
+                                <a download href="assets/pdf/Resume_Abrar_JT.pdf" class="home__button-movil"><i class="bx bx-download" aria-hidden="true"></i>Download resume <span class="download-format">PDF</span></a>
+                                <a href="#experience" class="home__experience-link">View experience<i class="bx bx-down-arrow-alt" aria-hidden="true"></i></a>
                             </div>
                         </div>
-
                         <div class="home__address bd-grid">
-                            <span class="home__information">
-                                <i class='bx bx-map home__icon'></i> Toronto, ON, Canada
-                            </span>
-                            <a href="https://abrartarafder.github.io/" target="_black" class="home__information">
-                                <i class='bx bx-globe home__icon'></i> My Website
-                            </a>
-                            <a href="https://abrart1075.wixsite.com/my-site" target="_black" class="home__information">
-                                <i class='bx bxl-wix home__icon'></i> My Wix Website
-                            </a>
-                            <a href="mailto:abrart1075@gmail.com" target="_black" class="home__information">
-                                <i class='bx bx-envelope home__icon'></i> abrart1075@gmail.com
-                            </a>
-                            </a>
+                            <span class="home__information"><i class="bx bx-map home__icon" aria-hidden="true"></i>Toronto, ON, Canada</span>
+                            <a href="https://abrartarafder.github.io/" target="_blank" rel="noopener noreferrer" class="home__information"><i class="bx bx-globe home__icon" aria-hidden="true"></i>Personal website</a>
+                            <a href="https://abrartarafder.github.io/portfolio-short/" target="_blank" rel="noopener noreferrer" class="home__information"><i class="bx bx-folder-open home__icon" aria-hidden="true"></i>Project portfolio</a>
+                            <a href="https://abrart1075.wixsite.com/my-site" target="_blank" rel="noopener noreferrer" class="home__information home__information--secondary"><i class="bx bxl-wix home__icon" aria-hidden="true"></i>Wix website</a>
+                            <a href="mailto:abrart1075@gmail.com" class="home__information"><i class="bx bx-envelope home__icon" aria-hidden="true"></i>abrart1075@gmail.com</a>
                         </div>
-
                     </div>
-
-                    <!-- Theme change button -->
-                    <i class="bx bx-moon change-theme" title="Theme" id="theme-button"></i>
-
-                    <!-- Button to generate and download the pdf. Available for desktop. -->
-                    <!-- <i class="bx bx-download generate-pdf" title="Generate PDF" id="resume-button"></i> -->
-
-                    <a title="Download Abrar Resume" class="bx bx-download generate-pdf" download=""
-                        href="assets/pdf/Resume_Abrar_JT.pdf" target="_blank"></a>
-
                 </section>
 
-                <!--========== SOCIAL ==========-->
-                <section class="social section">
-                    <h2 class="section-title">SOCIALS</h2>
-
+                <section class="social section" aria-labelledby="social-heading">
+                    <h2 class="section-title" id="social-heading">Connect</h2>
                     <div class="social__container bd-grid">
-                        <a href="https://www.linkedin.com/in/abrar-tarafder/" target="_black" class="social__link">
-                            <i class='bx bxl-linkedin-square social__icon'></i> @abrar-tarafder
-                        </a>
-
-                        <a href="https://github.com/abrartarafder" target="_black" class="social__link">
-                            <i class='bx bxl-github social__icon'></i> @abrartarafder
-                        </a>
+                        <a href="https://www.linkedin.com/in/abrar-tarafder/" target="_blank" rel="noopener noreferrer" class="social__link"><i class="bx bxl-linkedin-square social__icon" aria-hidden="true"></i>@abrar-tarafder</a>
+                        <a href="https://github.com/abrartarafder" target="_blank" rel="noopener noreferrer" class="social__link"><i class="bx bxl-github social__icon" aria-hidden="true"></i>@abrartarafder</a>
                     </div>
                 </section>
 
-                <!--========== PROFILE ==========-->
                 <section class="profile section" id="profile">
                     <h2 class="section-title">Profile</h2>
-                    <h5>Note: **This is a CV (more detailed than a resume), my resume can be downloaded using the
-                        download button above**</h5>
-                    <p class="profile__description" style="text-align: left;">
-                        Passionate about continuous learning and innovation, I am a recent Computer Science graduate
-                        from York University with nearly 4 years of professional experience gained through co-op and
-                        contract opportunities during my undergraduate studies. My experience spans software
-                        development,
-                        database engineering, database design, automation, data analytics, web design, and web
-                        development,
-                        allowing me to develop a versatile technical skill set while working on real-world projects.
-                        <br>
-                        <br>
-                        Throughout my professional experience, I have worked across a variety of technical environments,
-                        from developing and maintaining PostgreSQL databases and building automated data pipelines to
-                        developing web applications and automating operational processes. I have worked with
-                        technologies
-                        including Python, SQL, PostgreSQL, some ReactJS, JavaScript, HTML/CSS, PowerShell, GitLab CI/CD, and
-                        other development and automation tools.
-                        <br>
-                        <br>
-                        My experiences have allowed me to work across software development, data engineering, database
-                        systems, DevOps, automation, research, and web technologies. Beyond development, my background
-                        also includes experience in UI/UX design, data analytics, digital outreach, and graphic design,
-                        giving me the ability to approach problems from both technical and creative perspectives.
-                        <br>
-                        <br>
-                        As I begin the next stage of my career, I am looking for opportunities to apply my experience
-                        to meaningful projects while continuing to expand my technical expertise. I enjoy solving
-                        real-world problems, exploring new technologies, collaborating with others, and continuously
-                        challenging myself to learn and grow.
-                        <br>
-                    </p>
-                    <br>
-
-                    <p class="profile__description" style="text-align: left;">
-                        In terms of technical skills, I have experience with programming languages and technologies
-                        including <strong>Python</strong>, <strong>Java</strong>, <strong>C++</strong>,
-                        <strong>JavaScript</strong>, <strong>SQL</strong>, <strong>PostgreSQL</strong>,
-                         and <strong>Git/GitLab</strong>.
-                    </p>
-                    <br>
-                    <p class="profile__description" style="text-align: left;">
-                        In terms of technical skills, I am proficient in several programming languages including
-                        <strong>Python</strong>,
-                        <strong>Java</strong>, and <strong>C++</strong>.
-                    </p>
+                    <p class="profile__note">This is my expanded CV. <a href="assets/pdf/Resume_Abrar_JT.pdf" download>Download my resume (PDF)</a> for a shorter overview.</p>
+                    <p class="profile__description">I’m a Computer Science graduate from York University’s Lassonde School of Engineering, where I earned an Honours BSc with First Class Standing, a 3.8/4.0 GPA, and final-year Dean’s Honour Roll recognition. I bring more than three years of experience across co-op and part-time contract roles, including a 16-month placement at Hydro One and work at York University and WalkWithWeb.</p>
+                    <p class="profile__description">My work spans software development, database engineering, automation, and web development. I’ve developed a PostgreSQL research database for 10,000+ historical records, built Python/SQL data pipelines, automated database release and validation workflows, and created interactive websites. My foundation in algorithms, operating systems, and database systems is complemented by applied projects in computer vision and transit network analysis, along with the Google Data Analytics Professional Certificate.</p>
+                    <p class="profile__description">Beyond development, I bring experience in UI/UX design, digital outreach, and technical leadership. I’ve led a 14-person student ambassador team and served as a mentor and preliminary judge at UNHack 2025. These experiences have strengthened how I collaborate, communicate technical ideas, and consider the people using the systems I build. I’m seeking full-time opportunities in software development, data analytics, database engineering, and automation.</p>
                 </section>
 
-                <!--========== EDUCATION ==========-->
                 <section class="education section" id="education">
                     <h2 class="section-title">Education</h2>
-
                     <div class="education__container bd-grid">
-                        <div class="education__content">
-                            <div class="education__time">
-                                <span class="education__rounder"></span>
-                                <span class="education__line"></span>
-                            </div>
-
+                        <article class="education__content">
+                            <div class="education__time" aria-hidden="true"><span class="education__rounder"></span><span class="education__line"></span></div>
                             <div class="education__data bd-grid">
-                                <h3 class="education__title">Hons. Bachelor of Science, Computer Science</h3>
-                                <span class="education__studies">York University (Lassonde School of Engineering) -
-                                    Toronto, Ontario, Canada</span>
-                                <span class="education__year">Sep 2022 - Aug 2026</span>
+                                <h3 class="education__title">Honours Bachelor of Science, Computer Science</h3>
+                                <span class="education__studies">York University · Lassonde School of Engineering<br>Toronto, Ontario, Canada</span>
+                                <span class="education__year">Sep 2022 – Aug 2026</span>
                                 <ul class="education__list">
-                                    <li class="education__description">
-                                        <span class="education__circle"></span>
-                                        <div>Provost's Award</div>
-                                    </li>
-                                    <li class="education__description">
-                                        <span class="education__circle"></span>
-                                        <div>Entrance Award</div>
-                                    </li>
-
-                                    </li>
-                                    <li class="education__description">
-                                        <span class="education__circle"></span>
-                                        <div>Took Undergraduate and some Graduate level CS Courses</div>
-                                    </li>
-                                    <li class="education__description">
-                                        <span class="education__circle"></span>
-                                        <div>16 month Co-op</div>
-                                    </li>
+                                    <li class="education__description"><span class="education__circle" aria-hidden="true"></span><div>Provost’s Award</div></li>
+                                    <li class="education__description"><span class="education__circle" aria-hidden="true"></span><div>Entrance Award</div></li>
+                                    <li class="education__description"><span class="education__circle" aria-hidden="true"></span><div>Undergraduate and selected graduate-level CS coursework</div></li>
+                                    <li class="education__description"><span class="education__circle" aria-hidden="true"></span><div>16-month co-op</div></li>
                                 </ul>
                             </div>
-
-                        </div>
-
-                    </div>
-                    <br>
-                    <div class="education__container bd-grid">
-                        <div class="education__content">
-                            <div class="education__time">
-                                <span class="education__rounder"></span>
-                                <span class="education__line"></span>
-                            </div>
-
+                        </article>
+                        <article class="education__content">
+                            <div class="education__time" aria-hidden="true"><span class="education__rounder"></span><span class="education__line"></span></div>
                             <div class="education__data bd-grid">
-                                <h3 class="education__title">Hons. Bachelor of Science, Computer Science</h3>
-                                <span class="education__studies">Ontario Tech University - Oshawa, Ontario,
-                                    Canada</span>
-                                <span class="education__year">Sep 2021 - Apr 2022</span>
+                                <h3 class="education__title">Computer Science (transfer studies)</h3>
+                                <span class="education__studies">Ontario Tech University<br>Oshawa, Ontario, Canada</span>
+                                <span class="education__year">Sep 2021 – Apr 2022</span>
                                 <ul class="education__list">
-                                    <li class="education__description">
-                                        <span class="education__circle"></span>
-                                        <div>President's Honour's List Award</div>
-                                    </li>
-                                    <li class="education__description">
-                                        <span class="education__circle"></span>
-                                        <div>President's Honour's List Award</div>
-                                    </li>
-                                    </li>
-                                    <li class="education__description">
-                                        <span class="education__circle"></span>
-                                        <div>Entrance Award of Recognition</div>
-                                    </li>
-                                    <li class="education__description">
-                                        <span class="education__circle"></span>
-                                        <div>Transferred to York University</div>
-                                    </li>
+                                    <li class="education__description"><span class="education__circle" aria-hidden="true"></span><div>President’s Honours List Award</div></li>
+                                    <li class="education__description"><span class="education__circle" aria-hidden="true"></span><div>Entrance Award of Recognition</div></li>
+                                    <li class="education__description"><span class="education__circle" aria-hidden="true"></span><div>Transferred to York University</div></li>
                                 </ul>
                             </div>
-
-                        </div>
-
+                        </article>
                     </div>
                 </section>
 
-
-                <!--========== SKILLS  ==========-->
-                <section class="skills section hide" id="skills">
+                <section class="skills section" id="skills">
                     <h2 class="section-title">Skills</h2>
-
-                    <div class="skills__content bd-grid">
-                        <div class="skills__name">
-                            <span class="skills__circle"></span> React
-                            <div class="skills__time-stars" title="2 Stars">
-                                <span class="skills__time">(0.5 years)</span>
-                                <span class="skills__stars"><i class='bx bxs-star star__icon'></i>1</span>
-                            </div>
-                        </div>
-                        <div class="skills__name">
-                            <span class="skills__circle"></span> JavaScript
-                            <div class="skills__time-stars" title="2 Stars">
-                                <span class="skills__time">(1 years)</span>
-                                <span class="skills__stars"><i class='bx bxs-star star__icon'></i>2</span>
-                            </div>
-                        </div>
-
-                        <div class="skills__name">
-                            <span class="skills__circle"></span> Html / CSS
-                            <div class="skills__time-stars" title="2 Stars">
-                                <span class="skills__time">(1 year)</span>
-                                <span class="skills__stars"><i class='bx bxs-star star__icon'></i>2</span>
-                            </div>
-                        </div>
-                        <div class="skills__name">
-                            <span class="skills__circle"></span> Tailwind CSS
-                            <div class="skills__time-stars" title="2 Stars">
-                                <span class="skills__time">(1 year)</span>
-                                <span class="skills__stars"><i class='bx bxs-star star__icon'></i>2</span>
-                            </div>
-                        </div>
-                        <div class="skills__name">
-                            <span class="skills__circle"></span> Java
-                            <div class="skills__time-stars" title="4 Stars">
-                                <span class="skills__time">(1 year)</span>
-                                <span class="skills__stars"><i class='bx bxs-star star__icon'></i>4</span>
-                            </div>
-                        </div>
-                        <div class="skills__name">
-                            <span class="skills__circle"></span> Assembly
-                            <div class="skills__time-stars" title="2 Stars">
-                                <span class="skills__time">(0.5 year)</span>
-                                <span class="skills__stars"><i class='bx bxs-star star__icon'></i>2</span>
-                            </div>
-                        </div>
-                        <div class="skills__name">
-                            <span class="skills__circle"></span> C++
-                            <div class="skills__time-stars" title="3 Stars">
-                                <span class="skills__time">(2 years)</span>
-                                <span class="skills__stars"><i class='bx bxs-star star__icon'></i>3</span>
-                            </div>
-                        </div>
-                        <div title="Object-oriented programming" class="skills__name">
-                            <span class="skills__circle"></span> OOP
-                            <div class="skills__time-stars" title="4 Stars">
-                                <span class="skills__time">(2 years)</span>
-                                <span class="skills__stars"><i class='bx bxs-star star__icon'></i>4</span>
-                            </div>
-                        </div>
-                        <div title="Object-oriented programming" class="skills__name">
-                            <span class="skills__circle"></span> WIX
-                            <div class="skills__time-stars" title="4 Stars">
-                                <span class="skills__time">(2 years)</span>
-                                <span class="skills__stars"><i class='bx bxs-star star__icon'></i>4</span>
-                            </div>
-                        </div>
-                        <div title="Object-oriented programming" class="skills__name">
-                            <span class="skills__circle"></span> WordPress
-                            <div class="skills__time-stars" title="4 Stars">
-                                <span class="skills__time">(2 years)</span>
-                                <span class="skills__stars"><i class='bx bxs-star star__icon'></i>4</span>
-                            </div>
-                        </div>
-                        <div class="skills__name">
-                            <span class="skills__circle"></span> Web Design
-                            <div class="skills__time-stars" title="4 Stars">
-                                <span class="skills__time">(2 years)</span>
-                                <span class="skills__stars"><i class='bx bxs-star star__icon'></i>4</span>
-                            </div>
-                        </div>
-                        <div class="skills__name showmore hide">
-                            <span class="skills__circle"></span> Bootstrap 4
-                            <div class="skills__time-stars" title="5 Stars">
-                                <span class="skills__time">(2 years)</span>
-                                <span class="skills__stars"><i class='bx bxs-star star__icon'></i>5</span>
-                            </div>
-                        </div>
-                        <div class="skills__name showmore hide">
-                            <span class="skills__circle"></span> MongoDB
-                            <div class="skills__time-stars" title="2 Stars">
-                                <span class="skills__time">(1 years)</span>
-                                <span class="skills__stars"><i class='bx bxs-star star__icon'></i>2</span>
-                            </div>
-                        </div>
-                        <div class="skills__name showmore hide">
-                            <span class="skills__circle"></span> MySQL
-                            <div class="skills__time-stars" title="1 Stars">
-                                <span class="skills__time">(0.5 years)</span>
-                                <span class="skills__stars"><i class='bx bxs-star star__icon'></i>1</span>
-                            </div>
-                        </div>
-                        <div class="skills__name showmore hide">
-                            <span class="skills__circle"></span> Git / Github
-                            <div class="skills__time-stars" title="3 Stars">
-                                <span class="skills__time">(2 years)</span>
-                                <span class="skills__stars"><i class='bx bxs-star star__icon'></i>3</span>
-                            </div>
-                        </div>
-                        <div class="skills__name showmore hide">
-                            <span class="skills__circle"></span> Canva
-                            <div class="skills__time-stars" title="4 Stars">
-                                <span class="skills__time">(5 years)</span>
-                                <span class="skills__stars"><i class='bx bxs-star star__icon'></i>4</span>
-                            </div>
-                        </div>
-                        <div class="skills__name showmore hide">
-                            <span class="skills__circle"></span> Figma
-                            <div class="skills__time-stars" title="4 Stars">
-                                <span class="skills__time">(3 year)</span>
-                                <span class="skills__stars"><i class='bx bxs-star star__icon'></i>4</span>
-                            </div>
-                        </div>
-                        <div class="skills__name showmore hide">
-                            <span class="skills__circle"></span> Python
-                            <div class="skills__time-stars" title="4 Stars">
-                                <span class="skills__time">(2 year)</span>
-                                <span class="skills__stars"><i class='bx bxs-star star__icon'></i>4</span>
-                            </div>
-                        </div>
-                        <div class="skills__name showmore hide">
-                            <span class="skills__circle"></span> MailChimp
-                            <div class="skills__time-stars" title="4 Stars">
-                                <span class="skills__time">(1+ years)</span>
-                                <span class="skills__stars"><i class='bx bxs-star star__icon'></i>4</span>
-                            </div>
-                        </div>
-                        <div class="skills__name showmore hide">
-                            <span class="skills__circle"></span> Adobe Photoshop
-                            <div class="skills__time-stars" title="2 Stars">
-                                <span class="skills__time">(1+ years)</span>
-                                <span class="skills__stars"><i class='bx bxs-star star__icon'></i>2</span>
-                            </div>
-                        </div>
-                        <div class="skills__name showmore hide">
-                            <span class="skills__circle"></span> LaTex
-                            <div class="skills__time-stars" title="2 Stars">
-                                <span class="skills__time">(0.5 years)</span>
-                                <span class="skills__stars"><i class='bx bxs-star star__icon'></i>2</span>
-                            </div>
-                        </div>
-                        <div class="skills__name showmore hide">
-                            <span class="skills__circle"></span> Microsoft Office
-                            <div class="skills__time-stars" title="5 Stars">
-                                <span class="skills__time">(4+ years)</span>
-                                <span class="skills__stars"><i class='bx bxs-star star__icon'></i>5</span>
-                            </div>
-                        </div>
-                        <div class="skills__name showmore hide">
-                            <span class="skills__circle"></span> Google Drive
-                            <div class="skills__time-stars" title="5 Stars">
-                                <span class="skills__time">(4+ years)</span>
-                                <span class="skills__stars"><i class='bx bxs-star star__icon'></i>5</span>
-                            </div>
-                        </div>
+                    <div class="skills__group">
+                        <h3 class="skills__heading">Languages &amp; databases</h3>
+                        <ul class="skills__content bd-grid">
+                            <li class="skills__name"><span class="skills__circle" aria-hidden="true"></span>Python</li>
+                            <li class="skills__name"><span class="skills__circle" aria-hidden="true"></span>SQL</li>
+                            <li class="skills__name"><span class="skills__circle" aria-hidden="true"></span>PostgreSQL</li>
+                            <li class="skills__name"><span class="skills__circle" aria-hidden="true"></span>Java</li>
+                            <li class="skills__name"><span class="skills__circle" aria-hidden="true"></span>C++</li>
+                            <li class="skills__name"><span class="skills__circle" aria-hidden="true"></span>JavaScript</li>
+                        </ul>
                     </div>
-                    <a href="#" class="skills-button" id="skills-button">See More</a>
+                    <div class="skills__group">
+                        <h3 class="skills__heading">Development &amp; automation</h3>
+                        <ul class="skills__content bd-grid">
+                            <li class="skills__name"><span class="skills__circle" aria-hidden="true"></span>HTML / CSS</li>
+                            <li class="skills__name"><span class="skills__circle" aria-hidden="true"></span>React</li>
+                            <li class="skills__name"><span class="skills__circle" aria-hidden="true"></span>Git / GitLab CI/CD</li>
+                            <li class="skills__name"><span class="skills__circle" aria-hidden="true"></span>PowerShell</li>
+                            <li class="skills__name"><span class="skills__circle" aria-hidden="true"></span>ETL pipelines</li>
+                            <li class="skills__name"><span class="skills__circle" aria-hidden="true"></span>Database design</li>
+                        </ul>
+                    </div>
+                    <div id="more-skills">
+                    <div class="skills__group">
+                        <h3 class="skills__heading">Web &amp; software tools</h3>
+                        <ul class="skills__content bd-grid">
+                            <li class="skills__name"><span class="skills__circle" aria-hidden="true"></span>Bootstrap</li>
+                            <li class="skills__name"><span class="skills__circle" aria-hidden="true"></span>Tailwind CSS</li>
+                            <li class="skills__name"><span class="skills__circle" aria-hidden="true"></span>PHP</li>
+                            <li class="skills__name"><span class="skills__circle" aria-hidden="true"></span>MySQL</li>
+                            <li class="skills__name"><span class="skills__circle" aria-hidden="true"></span>MongoDB</li>
+                            <li class="skills__name"><span class="skills__circle" aria-hidden="true"></span>Assembly</li>
+                            <li class="skills__name"><span class="skills__circle" aria-hidden="true"></span>OOP</li>
+                            <li class="skills__name"><span class="skills__circle" aria-hidden="true"></span>Shell scripting</li>
+                            <li class="skills__name"><span class="skills__circle" aria-hidden="true"></span>Perl</li>
+                            <li class="skills__name"><span class="skills__circle" aria-hidden="true"></span>WordPress</li>
+                            <li class="skills__name"><span class="skills__circle" aria-hidden="true"></span>Wix</li>
+                        </ul>
+                    </div>
+                    <div class="skills__group">
+                        <h3 class="skills__heading">Design &amp; productivity</h3>
+                        <ul class="skills__content bd-grid">
+                            <li class="skills__name"><span class="skills__circle" aria-hidden="true"></span>Figma</li>
+                            <li class="skills__name"><span class="skills__circle" aria-hidden="true"></span>Canva</li>
+                            <li class="skills__name"><span class="skills__circle" aria-hidden="true"></span>Adobe Photoshop</li>
+                            <li class="skills__name"><span class="skills__circle" aria-hidden="true"></span>Mailchimp</li>
+                            <li class="skills__name"><span class="skills__circle" aria-hidden="true"></span>Power Automate</li>
+                            <li class="skills__name"><span class="skills__circle" aria-hidden="true"></span>Power Apps</li>
+                            <li class="skills__name"><span class="skills__circle" aria-hidden="true"></span>Power BI</li>
+                            <li class="skills__name"><span class="skills__circle" aria-hidden="true"></span>Microsoft Office</li>
+                            <li class="skills__name"><span class="skills__circle" aria-hidden="true"></span>Google Drive</li>
+                            <li class="skills__name"><span class="skills__circle" aria-hidden="true"></span>LaTeX</li>
+                        </ul>
+                    </div>
+                    </div>
+                    <button type="button" class="skills-button" id="skills-button" aria-expanded="false" aria-controls="more-skills" hidden>More tools</button>
                 </section>
 
+                <section class="languages section">
+                        <h2 class="section-title">Languages</h2>
+
+                        <div class="languages__container">
+                            <ul class="languages__content bd-grid">
+                                <li class="languages__name">
+                                    <span class="languages__circle" aria-hidden="true"></span> English <span class="language-level">Native</span>
+                                </li>
+                                <li class="languages__name">
+                                    <span class="languages__circle" aria-hidden="true"></span> Bengali <span class="language-level">Native</span>
+                                </li>
+                                <li class="languages__name">
+                                    <span class="languages__circle" aria-hidden="true"></span> Arabic <span class="language-level">Basic</span>
+                                </li>
+                                <li class="languages__name">
+                                    <span class="languages__circle" aria-hidden="true"></span> Hindi / Urdu <span class="language-level">Basic</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </section>
+
+                <section class="interests section">
+                        <h2 class="section-title">Interests</h2>
+
+                        <div class="interests__container bd-grid">
+                            <div class="interests__content">
+                                <i class="bx bx-camera interests__icon" aria-hidden="true"></i>
+                                <span class="interests__name">Photography</span>
+                            </div>
+
+                            <div class="interests__content">
+                                <i class="bx bxs-plane-alt interests__icon" aria-hidden="true"></i>
+                                <span class="interests__name">Travel</span>
+                            </div>
+
+                            <div class="interests__content">
+                                <i class="bx bx-game interests__icon" aria-hidden="true"></i>
+                                <span class="interests__name">Gaming</span>
+                            </div>
+                            <div class="interests__content">
+                                <i class="bx bx-dumbbell interests__icon" aria-hidden="true"></i>
+                                <span class="interests__name">Fitness</span>
+                            </div>
+                            <div class="interests__content">
+                                <i class="bx bx-ball interests__icon" aria-hidden="true"></i>
+                                <span class="interests__name">Sports</span>
+                            </div>
+
+                        </div>
+                    </section>
             </div>
 
             <div class="resume__right">
-                <!--========== EXPERIENCE ==========-->
                 <section class="experience section" id="experience">
                     <h2 class="section-title">Experience</h2>
-
                     <div class="experience__container bd-grid">
-                        <div class="experience__content">
-                            <div class="experience__time">
+                        <article class="experience__content">
+                            <div class="experience__time" aria-hidden="true">
                                 <span class="experience__rounder"></span>
                                 <span class="experience__line"></span>
                             </div>
                             <div class="experience__data bd-grid">
-                                <h3 class="experience__title">Database Developer & Administrator</strong></h3>
-                                <span class="experience__company">May 2026 - Aug 2026 | York University<a
-                                        href="https://www.yorku.ca/" target="_blank"><i
-                                            class="bx bx-link external-link"></i></a></span>
+                                <h3 class="experience__title">Database Developer &amp; Administrator</h3>
+                                <div class="experience__meta"><span class="experience__company">York University <a href="https://www.yorku.ca/" target="_blank" rel="noopener noreferrer" aria-label="Visit York University website"><i class="bx bx-link external-link" aria-hidden="true"></i></a></span><span class="experience__period">May 2026 – Aug 2026</span></div>
                                 <ul class="experience__list">
-
-                                    <li class="experience__description">
-                                        <span class="experience__circle"></span>
-                                        <div><strong>Database Development:</strong> Developed and maintained a
-                                            PostgreSQL research database using SQL and Python, building automated
-                                            pipelines to clean, merge, and standardize 10,000+ historical maritime
-                                            records across interconnected relational tables.</div>
-                                        <br>
-                                    </li>
-
-                                    <li class="experience__description">
-                                        <span class="experience__circle"></span>
-                                        <div><strong>Data Engineering & Automation:</strong> Automated the extraction of
-                                            metadata and personnel records from 28 archival PDF documents using Python,
-                                            transforming unstructured historical documents into normalized,
-                                            database-ready datasets through custom ETL workflows.</div>
-                                        <br>
-                                    </li>
-
-                                    <li class="experience__description">
-                                        <span class="experience__circle"></span>
-                                        <div><strong>Database Design:</strong> Designed relational database schemas, SQL
-                                            merge workflows, lookup systems, and data import procedures, integrating
-                                            voyage, ship, location, document, and personnel data while generating
-                                            foreign key relationships.</div>
-                                        <br>
-                                    </li>
-
-                                    <li class="experience__description">
-                                        <span class="experience__circle"></span>
-                                        <div><strong>Data Processing:</strong> Developed Python scripts to parse and
-                                            standardize historical records by extracting names, occupations, wages,
-                                            demographic information, family relationships, voyage details, and origin
-                                            mappings while improving data quality and consistency.</div>
-                                        <br>
-                                    </li>
-
+                                <li class="experience__description"><span class="experience__circle" aria-hidden="true"></span><div><strong>Database development:</strong> Built and maintained a PostgreSQL research database using SQL and Python. Automated pipelines cleaned, merged, and standardized 10,000+ historical maritime records across interconnected relational tables.</div></li>
+                                <li class="experience__description"><span class="experience__circle" aria-hidden="true"></span><div><strong>Data engineering:</strong> Automated metadata and personnel extraction from 28 archival PDFs with Python, transforming unstructured historical documents into normalized, database-ready datasets through custom ETL workflows.</div></li>
+                                <li class="experience__description"><span class="experience__circle" aria-hidden="true"></span><div><strong>Database design:</strong> Designed relational schemas, SQL merge workflows, lookup systems, and import procedures. Connected voyage, ship, location, document, and personnel data through foreign key relationships.</div></li>
+                                <li class="experience__description"><span class="experience__circle" aria-hidden="true"></span><div><strong>Data quality:</strong> Wrote Python scripts to extract and standardize names, occupations, wages, demographics, family relationships, voyage details, and origin mappings.</div></li>
                                 </ul>
-
                                 <div class="experience__technologies">
-                                    <span>Skill Areas</span>
-                                    <ul class="experience__technologies-list">
+                                    <span>Skills &amp; tools</span>
+                                    <ul class="experience__technologies-list" aria-label="Main skills and tools used">
                                         <li class="experience__technologies-item">PostgreSQL</li>
                                         <li class="experience__technologies-item">SQL</li>
                                         <li class="experience__technologies-item">Python</li>
                                         <li class="experience__technologies-item">ETL Pipelines</li>
                                         <li class="experience__technologies-item">Database Design</li>
                                         <li class="experience__technologies-item">Data Engineering</li>
+                                    </ul>
+                                    <details class="experience__more-tools">
+                                        <summary>2 more tools<i class="bx bx-chevron-down" aria-hidden="true"></i></summary>
+                                        <ul class="experience__technologies-list" aria-label="Additional skills and tools used">
                                         <li class="experience__technologies-item">GitHub</li>
                                         <li class="experience__technologies-item">Jupyter Notebook</li>
-                                    </ul>
+                                        </ul>
+                                    </details>
                                 </div>
                             </div>
-                        </div>
-                        <div class="experience__content">
-                            <div class="experience__time">
+                        </article>
+                        <article class="experience__content">
+                            <div class="experience__time" aria-hidden="true">
                                 <span class="experience__rounder"></span>
                                 <span class="experience__line"></span>
                             </div>
                             <div class="experience__data bd-grid">
-                                <h3 class="experience__title">OT Operations Intern (Co-op)</strong></h3>
-                                <span class="experience__company">May 2024 - Aug 2025 | Hydro One<a
-                                        href="https://www.hydroone.com/" target="_blank"><i
-                                            class="bx bx-link external-link"></i></a></span>
+                                <h3 class="experience__title">OT Operations Intern (Co-op)</h3>
+                                <div class="experience__meta"><span class="experience__company">Hydro One <a href="https://www.hydroone.com/" target="_blank" rel="noopener noreferrer" aria-label="Visit Hydro One website"><i class="bx bx-link external-link" aria-hidden="true"></i></a></span><span class="experience__period">May 2024 – Aug 2025</span></div>
                                 <ul class="experience__list">
-                                    <li class="experience__description">
-                                        <span class="experience__circle"></span>
-                                        <div><strong>Teams worked with (as part of the Data Services Team): DBR
-                                                Subteam, TX Applications, OT Operations Tools</strong>
-                                        </div>
-                                        <br>
-                                    </li>
-                                    <li class="experience__description">
-                                        <span class="experience__circle"></span>
-                                        <div>The Data Services Team supports IESO registration, System Operations, and
-                                            Planning by providing power system network modeling, SCADA data, operating
-                                            displays, and managing power system assets and customer data.
-                                        </div>
-                                        <br>
-                                    </li>
-                                    <li class="experience__description">
-                                        <span class="experience__circle"></span>
-                                        <div><strong>Combination of all three teams: </strong>Worked on automating the
-                                            loading processes between servers in different domains using pipelines,
-                                            utilized PERL and SQL scripts and created pipelines to automate manual
-                                            processes.
-                                            Before creating these automation processes, I manually loaded all of the EMS
-                                            and its other processes while creating thorough documentation for each
-                                            process.
-                                        </div>
-                                        <br>
-                                    </li>
-
-                                    <li class="experience__description">
-                                        <span class="experience__circle"></span>
-                                        <div><strong>DBR Subteam (TX Applications): </strong>Collaborated with the Data
-                                            Services and TX Applications team to design and develop an in-house
-                                            application for biweekly QA and Live Database Releases. Wrote automation
-                                            scripts to streamline many Data Services processes. Created in-house
-                                            shuttling processes for servers using Gitlab Pipelines (CI/CD) and PERL
-                                            Scripts. Saved a lot of time, cost and effort for the entire Application
-                                            Modelling Team.
-                                        </div>
-                                        <br>
-                                    </li>
-                                    <li class="experience__description">
-                                        <span class="experience__circle"></span>
-                                        <div><strong>OT Operating Tools: </strong>Automated error handling on GitLab
-                                            using Python and Powershell scripts to parse and convert error details.
-                                            Improved the external pipeline for enhanced functionality. Assisted in
-                                            building and optimizing data services pipelines. Saved a lot of time (70%),
-                                            cost and effort for the entire Application Modelling Team.
-                                        </div>
-                                        <br>
-                                    </li>
-                                    <li class="experience__description">
-                                        <span class="experience__circle"></span>
-                                        <div><strong>Data Services: </strong>Redesigned SharePoint for the Data Services
-                                            team, collaborating with subteams to facilitate a smooth migration.
-                                            Supported display building by addressing functionality issues and conducting
-                                            validation on builds. Assisted a specific acquisition process by mapping and
-                                            uploading equipment nameplate photos. Managed daily uploads of equipment
-                                            nameplate photos, ensuring accuracy and tracking in-service dates. Developed
-                                            and refined a Power Automate tracker to monitor photo submissions and verify
-                                            missing equipment nameplate photos before uploading.
-                                        </div>
-                                        <br>
-                                    </li>
+                                <li class="experience__description"><span class="experience__circle" aria-hidden="true"></span><div><strong>Data Services:</strong> Worked with the DBR, TX Applications, and OT Operations Tools teams, supporting power system network modelling, SCADA data, operating displays, and asset and customer data for IESO registration, System Operations, and Planning.</div></li>
+                                <li class="experience__description"><span class="experience__circle" aria-hidden="true"></span><div><strong>Release automation:</strong> Automated loading and transfer processes between servers in different domains using GitLab CI/CD, Perl, and SQL. Performed manual EMS loads and documented the workflows before automating them.</div></li>
+                                <li class="experience__description"><span class="experience__circle" aria-hidden="true"></span><div><strong>Application development:</strong> Collaborated with Data Services and TX Applications to build an in-house application for biweekly QA and live database releases. Created scripts and server transfer pipelines to streamline release work for the Application Modelling Team.</div></li>
+                                <li class="experience__description"><span class="experience__circle" aria-hidden="true"></span><div><strong>Pipeline improvements:</strong> Automated GitLab error handling with Python and PowerShell, improved an external pipeline, and helped optimize Data Services pipelines, contributing to 70% time savings for the Application Modelling Team.</div></li>
+                                <li class="experience__description"><span class="experience__circle" aria-hidden="true"></span><div><strong>Internal tools:</strong> Redesigned the Data Services SharePoint site and coordinated migration with subteams. Resolved functionality issues in operating displays and validated builds.</div></li>
+                                <li class="experience__description"><span class="experience__circle" aria-hidden="true"></span><div><strong>Asset tracking:</strong> Mapped and uploaded equipment nameplate photos for an acquisition process, tracked in-service dates, and refined a Power Automate tracker to monitor submissions and identify missing photos.</div></li>
                                 </ul>
                                 <div class="experience__technologies">
-                                    <span>Skill Areas</span>
-                                    <ul class="experience__technologies-list">
-                                        <li class="experience__technologies-item">SCADA Architecture - Monitor/Control
-                                            equipment</li>
-                                        <li class="experience__technologies-item">Gitlab</li>
+                                    <span>Skills &amp; tools</span>
+                                    <ul class="experience__technologies-list" aria-label="Main skills and tools used">
+                                        <li class="experience__technologies-item">Python</li>
+                                        <li class="experience__technologies-item">SQL</li>
+                                        <li class="experience__technologies-item">GitLab CI/CD</li>
+                                        <li class="experience__technologies-item">PowerShell</li>
+                                        <li class="experience__technologies-item">SCADA Architecture</li>
+                                        <li class="experience__technologies-item">Power Automate</li>
+                                    </ul>
+                                    <details class="experience__more-tools">
+                                        <summary>25 more tools<i class="bx bx-chevron-down" aria-hidden="true"></i></summary>
+                                        <ul class="experience__technologies-list" aria-label="Additional skills and tools used">
+                                        <li class="experience__technologies-item">GitLab</li>
                                         <li class="experience__technologies-item">Perl</li>
-                                        <li class="experience__technologies-item">Github</li>
-                                        <li class="experience__technologies-item">Gitlab Pipelines (CI/CD)</li>
+                                        <li class="experience__technologies-item">GitHub</li>
                                         <li class="experience__technologies-item">Mermaid Diagrams</li>
                                         <li class="experience__technologies-item">DevOps</li>
-                                        <li class="experience__technologies-item">SQL</li>
-                                        <li class="experience__technologies-item">Powershell</li>
                                         <li class="experience__technologies-item">Figma</li>
-                                        <li class="experience__technologies-item">Bootstrap React</li>
-                                        <li class="experience__technologies-item">Bootstrap CSS (V4 & V5)</li>
+                                        <li class="experience__technologies-item">React Bootstrap</li>
+                                        <li class="experience__technologies-item">Bootstrap 4 &amp; 5</li>
                                         <li class="experience__technologies-item">Automation</li>
                                         <li class="experience__technologies-item">Data Migration</li>
                                         <li class="experience__technologies-item">Kanban Boards</li>
-                                        <li class="experience__technologies-item">Python</li>
                                         <li class="experience__technologies-item">Jira Kanban Board</li>
                                         <li class="experience__technologies-item">Agile Methodologies</li>
                                         <li class="experience__technologies-item">Agile Project Management Process</li>
-                                        <li class="experience__technologies-item">Sharepoint Designer</li>
+                                        <li class="experience__technologies-item">SharePoint Designer</li>
                                         <li class="experience__technologies-item">Shell Scripting</li>
                                         <li class="experience__technologies-item">GE IGrid</li>
                                         <li class="experience__technologies-item">YAML</li>
-                                        <li class="experience__technologies-item">PowerBI</li>
+                                        <li class="experience__technologies-item">Power BI</li>
                                         <li class="experience__technologies-item">Power Apps</li>
-                                        <li class="experience__technologies-item">Power Automate</li>
                                         <li class="experience__technologies-item">Energy Management System</li>
                                         <li class="experience__technologies-item">Microsoft Office</li>
-                                        <li class="experience__technologies-item">Vanilla JS</li>
+                                        <li class="experience__technologies-item">JavaScript</li>
                                         <li class="experience__technologies-item">Microsoft Visio</li>
                                         <li class="experience__technologies-item">Networking and Public Speaking</li>
-
-
-                                    </ul>
+                                        </ul>
+                                    </details>
                                 </div>
                             </div>
-                        </div>
-
-                        <div class="experience__content">
-                            <div class="experience__time">
+                        </article>
+                        <article class="experience__content">
+                            <div class="experience__time" aria-hidden="true">
                                 <span class="experience__rounder"></span>
                                 <span class="experience__line"></span>
                             </div>
                             <div class="experience__data bd-grid">
-                                <h3 class="experience__title">Web Developer & Digital Outreach Research Assistant</h3>
-                                <span class="experience__company">May 2023 - May 2024 | WalkWithWeb<a
-                                        href="https://walkwithweb.org/Public/" target="_blank"><i
-                                            class="bx bx-link external-link"></i></a></span>
+                                <h3 class="experience__title">Web Developer &amp; Digital Outreach Research Assistant</h3>
+                                <div class="experience__meta"><span class="experience__company">WalkWithWeb <a href="https://walkwithweb.org/Public/" target="_blank" rel="noopener noreferrer" aria-label="Visit WalkWithWeb website"><i class="bx bx-link external-link" aria-hidden="true"></i></a></span><span class="experience__period">May 2023 – May 2024</span></div>
                                 <ul class="experience__list">
-                                    <li class="experience__description">
-                                        <span class="experience__circle"></span>
-                                        <div><Strong>Software Development: </Strong>Researched and implemented websites
-                                            using HTML, CSS, Bootstrap, and JavaScript facilitating seamless user
-                                            interaction
-                                            within a visually captivating and dynamic environment.
-                                        </div>
-                                        <br>
-                                    </li>
-                                    <li class="experience__description">
-                                        <span class="experience__circle"></span>
-                                        <div><Strong>Software Development: </Strong>
-                                            Developed websites (including an e-book website) from scratch using HTML,
-                                            CSS, Bootstrap, JS and MYSQL Workbench to showcase the data allowing users
-                                            to have easy access to historical data with the help of PHP to edit meta
-                                            fields of a collection of archives.
-
-                                        </div>
-                                        <br>
-                                    </li>
-                                    <li class="experience__description">
-                                        <span class="experience__circle"></span>
-                                        <div><Strong>Marketing & Graphic Design: </Strong> Designed Figma wireframes for
-                                            the websites,
-                                            contributed significantly to marketing strategies, social media analysis,
-                                            and
-                                            graphic design by designing templates, banners and posts on Canva for easy
-                                            navigation to WalkWithWeb and its partners.
-                                    </li>
-                                    <br>
-                                    <li class="experience__description">
-                                        <span class="experience__circle"></span>
-                                        <div> <Strong>Marketing: </Strong>Designed templates, banners and posts on Canva
-                                            for easy navigation to WalkWithWeb and its partners increasing post
-                                            engagement by 20%.
-                                    </li>
-                                    <br>
+                                <li class="experience__description"><span class="experience__circle" aria-hidden="true"></span><div><strong>Web development:</strong> Researched and built interactive websites using HTML, CSS, Bootstrap, and JavaScript.</div></li>
+                                <li class="experience__description"><span class="experience__circle" aria-hidden="true"></span><div><strong>Research applications:</strong> Developed websites, including an e-book site, to make historical data accessible. Used MySQL Workbench and PHP to work with archival data and edit collection metadata.</div></li>
+                                <li class="experience__description"><span class="experience__circle" aria-hidden="true"></span><div><strong>UI/UX design:</strong> Created Figma wireframes to plan website layouts and navigation.</div></li>
+                                <li class="experience__description"><span class="experience__circle" aria-hidden="true"></span><div><strong>Digital outreach:</strong> Contributed to marketing strategy and social media analysis. Designed Canva templates, banners, and posts for WalkWithWeb and its partners, increasing post engagement by 20%.</div></li>
                                 </ul>
                                 <div class="experience__technologies">
-                                    <span>Skill Areas</span>
-                                    <ul class="experience__technologies-list">
+                                    <span>Skills &amp; tools</span>
+                                    <ul class="experience__technologies-list" aria-label="Main skills and tools used">
                                         <li class="experience__technologies-item">HTML</li>
                                         <li class="experience__technologies-item">CSS</li>
                                         <li class="experience__technologies-item">JavaScript</li>
                                         <li class="experience__technologies-item">PHP</li>
                                         <li class="experience__technologies-item">Bootstrap</li>
-                                        <li class="experience__technologies-item">Canva</li>
                                         <li class="experience__technologies-item">Figma</li>
-                                        <li class="experience__technologies-item">MailChimp</li>
-                                        <li class="experience__technologies-item">Adobe Photoshop</li>
                                     </ul>
+                                    <details class="experience__more-tools">
+                                        <summary>3 more tools<i class="bx bx-chevron-down" aria-hidden="true"></i></summary>
+                                        <ul class="experience__technologies-list" aria-label="Additional skills and tools used">
+                                        <li class="experience__technologies-item">Canva</li>
+                                        <li class="experience__technologies-item">Mailchimp</li>
+                                        <li class="experience__technologies-item">Adobe Photoshop</li>
+                                        </ul>
+                                    </details>
                                 </div>
                             </div>
-                        </div>
+                        </article>
 
-
-                        <div class="experience__content">
-                            <div class="experience__time">
+                    </div>
+                    <details class="earlier-experience">
+                        <summary><span><strong>Earlier experience</strong><span class="earlier-experience__meta">5 roles · 2020–2023</span></span><i class="bx bx-plus" aria-hidden="true"></i></summary>
+                        <div class="experience__container bd-grid">
+                        <article class="experience__content">
+                            <div class="experience__time" aria-hidden="true">
                                 <span class="experience__rounder"></span>
                                 <span class="experience__line"></span>
                             </div>
-
                             <div class="experience__data bd-grid">
                                 <h3 class="experience__title">Social Media Analyst</h3>
-                                <span class="experience__company">Mar 2023 - May 2023 | InTech</span>
+                                <div class="experience__meta"><span class="experience__company">InTech</span><span class="experience__period">Mar 2023 – May 2023</span></div>
                                 <ul class="experience__list">
-                                    <li class="experience__description">
-                                        <span class="experience__circle"></span>
-                                        <div><Strong>Analytics: </Strong>Conducted analytics research on prospective
-                                            clients and engagements.
-                                        </div>
-                                    </li>
-                                    <br>
-                                    <li class="experience__description">
-                                        <span class="experience__circle"></span>
-                                        <div><Strong>Analytics: </Strong>Collaborated to develop an enhanced layout for
-                                            social media pages and
-                                            devised effective post tactics to promote the field of Cybersecurity to
-                                            individuals interested in learning.
-                                        </div>
-                                        <br>
-                                    </li>
+                                <li class="experience__description"><span class="experience__circle" aria-hidden="true"></span><div><strong>Analytics:</strong> Researched prospective clients and analyzed social media engagement.</div></li>
+                                <li class="experience__description"><span class="experience__circle" aria-hidden="true"></span><div><strong>Digital outreach:</strong> Collaborated on social media page layouts and posting strategies to introduce cybersecurity topics to new learners.</div></li>
                                 </ul>
                                 <div class="experience__technologies">
-                                    <span>Skill Areas</span>
-                                    <ul class="experience__technologies-list">
+                                    <span>Skills &amp; tools</span>
+                                    <ul class="experience__technologies-list" aria-label="Main skills and tools used">
                                         <li class="experience__technologies-item">Canva</li>
                                         <li class="experience__technologies-item">Figma</li>
                                         <li class="experience__technologies-item">Data Analytics</li>
                                         <li class="experience__technologies-item">Social Media Analytics</li>
                                         <li class="experience__technologies-item">Digital Marketing</li>
                                         <li class="experience__technologies-item">HTML</li>
+                                    </ul>
+                                    <details class="experience__more-tools">
+                                        <summary>3 more tools<i class="bx bx-chevron-down" aria-hidden="true"></i></summary>
+                                        <ul class="experience__technologies-list" aria-label="Additional skills and tools used">
                                         <li class="experience__technologies-item">CSS</li>
                                         <li class="experience__technologies-item">JavaScript</li>
-                                        <li class="experience__technologies-item">MongodDB</li>
-
-                                    </ul>
+                                        <li class="experience__technologies-item">MongoDB</li>
+                                        </ul>
+                                    </details>
                                 </div>
                             </div>
-                        </div>
-                        <div class="experience__content">
-                            <div class="experience__time">
+                        </article>
+                        <article class="experience__content">
+                            <div class="experience__time" aria-hidden="true">
                                 <span class="experience__rounder"></span>
                                 <span class="experience__line"></span>
                             </div>
-
                             <div class="experience__data bd-grid">
-                                <h3 class="experience__title">Software Development & Digital Marketing Intern</h3>
-                                <span class="experience__company">Jun 2022 - Jan 2023 | Opal, llc</span>
+                                <h3 class="experience__title">Software Development &amp; Digital Marketing Intern</h3>
+                                <div class="experience__meta"><span class="experience__company">Opal, LLC</span><span class="experience__period">Jun 2022 – Jan 2023</span></div>
                                 <ul class="experience__list">
-                                    <li class="experience__description">
-                                        <span class="experience__circle"></span>
-                                        <div><Strong>Software Development: </Strong>Improved the layout and styled
-                                            Opal's social media website using HTML & CSS.</div>
-                                        <br>
-                                    </li>
-                                    <li class="experience__description">
-                                        <span class="experience__circle"></span>
-                                        <div><Strong>Software Development: </Strong>Collaborated on, created and tested
-                                            the beta prototype for Opal's social media website on Figma.
-                                        </div>
-                                        <br>
-                                    </li>
-                                    <li class="experience__description">
-                                        <span class="experience__circle"></span>
-                                        <div><Strong>Software Development: </Strong>Collaborated on adding feature in
-                                            which the user ID is displayed when a user follows another user and storing
-                                            it in the database for easy access.
-                                        </div>
-                                        <br>
-                                    </li>
-                                    <li class="experience__description">
-                                        <span class="experience__circle"></span>
-                                        <div><Strong>Digital Marketing: </Strong>Generated Social Media bio's for
-                                            Instagram, LinkedIn, Twitter
-                                        </div>
-                                        <br>
-                                    </li>
-                                    <li class="experience__description">
-                                        <span class="experience__circle"></span>
-                                        <div><Strong>Digital Marketing: </Strong>Provided feedback on upcoming social
-                                            media posts ahead of new app launch and edited and created a content
-                                            calendar which significantly improved scheduling for posts.
-                                        </div>
-                                        <br>
-                                    </li>
-                                    <li class="experience__description">
-                                        <span class="experience__circle"></span>
-                                        <div><Strong>Digital Marketing: </Strong>Analyzed social media post tactics and
-                                            integrate them into Opal's social media outlines.
-                                        </div>
-                                        <br>
-                                    </li>
-                                    <li class="experience__description">
-                                        <span class="experience__circle"></span>
-                                        <div><Strong>Digital Marketing: </Strong>Implemented text letting users know
-                                            there are no posts if the featured and normal posts tabs are empty on the
-                                            social media website using HTML & CSS resulting in user satisfaction.
-                                        </div>
-                                        <br>
-                                    </li>
+                                <li class="experience__description"><span class="experience__circle" aria-hidden="true"></span><div><strong>Web development:</strong> Improved the layout and styling of Opal’s social media website using HTML and CSS, including empty states for featured and regular post feeds.</div></li>
+                                <li class="experience__description"><span class="experience__circle" aria-hidden="true"></span><div><strong>Prototyping:</strong> Collaborated on the design and testing of a beta website prototype in Figma.</div></li>
+                                <li class="experience__description"><span class="experience__circle" aria-hidden="true"></span><div><strong>Feature development:</strong> Helped implement a follow feature that displayed user IDs and stored follow information in the database.</div></li>
+                                <li class="experience__description"><span class="experience__circle" aria-hidden="true"></span><div><strong>Digital marketing:</strong> Wrote profile bios for Instagram, LinkedIn, and Twitter. Reviewed launch content, maintained a posting calendar, and incorporated findings from social media analysis into content plans.</div></li>
                                 </ul>
                                 <div class="experience__technologies">
-                                    <span>Skill Areas</span>
-                                    <ul class="experience__technologies-list">
-                                        <li class="experience__technologies-item">Canva</li>
-                                        <li class="experience__technologies-item">Figma</li>
-                                        <li class="experience__technologies-item">Data Analytics</li>
-                                        <li class="experience__technologies-item">Social Media Analytics</li>
-                                        <li class="experience__technologies-item">Digital Marketing</li>
+                                    <span>Skills &amp; tools</span>
+                                    <ul class="experience__technologies-list" aria-label="Skills and tools used">
+                                    <li class="experience__technologies-item">Canva</li>
+                                    <li class="experience__technologies-item">Figma</li>
+                                    <li class="experience__technologies-item">Data Analytics</li>
+                                    <li class="experience__technologies-item">Social Media Analytics</li>
+                                    <li class="experience__technologies-item">Digital Marketing</li>
                                     </ul>
                                 </div>
                             </div>
-                        </div>
-
-                        <div class="experience__content">
-                            <div class="experience__time">
+                        </article>
+                        <article class="experience__content">
+                            <div class="experience__time" aria-hidden="true">
                                 <span class="experience__rounder"></span>
                                 <span class="experience__line"></span>
                             </div>
-
                             <div class="experience__data bd-grid">
-                                <h3 class="experience__title">Digital Marketer, Web Designer & Advertisement Designer
-                                </h3>
-                                <span class="experience__company">May 2022 - Sep 2022 | EasyTraffic</span>
+                                <h3 class="experience__title">Digital Marketer, Web Designer &amp; Advertisement Designer</h3>
+                                <div class="experience__meta"><span class="experience__company">EasyTraffic</span><span class="experience__period">May 2022 – Sep 2022</span></div>
                                 <ul class="experience__list">
-                                    <li class="experience__description">
-                                        <span class="experience__circle"></span>
-                                        <div><strong>Marketing: </strong> Created personalized Facebook and LinkedIn
-                                            pages</div>
-                                    </li>
-                                    <br>
-                                    <li class="experience__description">
-                                        <span class="experience__circle"></span>
-                                        <div><strong>Graphic Design: </strong> Created demo advertisements for
-                                            prospective clients using Canva and Figma
-                                        </div>
-                                    </li>
-                                    <br>
-                                    <li class="experience__description">
-                                        <span class="experience__circle"></span>
-                                        <div><strong>Marketing: </strong> Reached out to clients through social media
-                                            platforms
-                                        </div>
-                                    </li>
-                                    <br>
-                                    <li class="experience__description">
-                                        <span class="experience__circle"></span>
-                                        <div><strong>Marketing: </strong> Planned and designed the business website
-                                            collaboratively
-                                        </div>
-                                    </li><br>
+                                <li class="experience__description"><span class="experience__circle" aria-hidden="true"></span><div><strong>Marketing:</strong> Created personalized Facebook and LinkedIn pages and contacted prospective clients through social media.</div></li>
+                                <li class="experience__description"><span class="experience__circle" aria-hidden="true"></span><div><strong>Graphic design:</strong> Designed sample advertisements for prospective clients using Canva and Figma.</div></li>
+                                <li class="experience__description"><span class="experience__circle" aria-hidden="true"></span><div><strong>Web design:</strong> Collaborated on the planning and design of the business website.</div></li>
                                 </ul>
                                 <div class="experience__technologies">
-                                    <span>Skill Areas</span>
-                                    <ul class="experience__technologies-list">
-                                        <li class="experience__technologies-item">Canva</li>
-                                        <li class="experience__technologies-item">Figma</li>
-                                        <li class="experience__technologies-item">Data Analytics</li>
-                                        <li class="experience__technologies-item">Social Media Analytics</li>
-                                        <li class="experience__technologies-item">Digital Marketing</li>
-                                        <li class="experience__technologies-item">Web Design</li>
+                                    <span>Skills &amp; tools</span>
+                                    <ul class="experience__technologies-list" aria-label="Skills and tools used">
+                                    <li class="experience__technologies-item">Canva</li>
+                                    <li class="experience__technologies-item">Figma</li>
+                                    <li class="experience__technologies-item">Data Analytics</li>
+                                    <li class="experience__technologies-item">Social Media Analytics</li>
+                                    <li class="experience__technologies-item">Digital Marketing</li>
+                                    <li class="experience__technologies-item">Web Design</li>
                                     </ul>
                                 </div>
                             </div>
-                        </div>
-
-                        <div class="experience__content">
-                            <div class="experience__time">
+                        </article>
+                        <article class="experience__content">
+                            <div class="experience__time" aria-hidden="true">
                                 <span class="experience__rounder"></span>
                                 <span class="experience__line"></span>
                             </div>
-
                             <div class="experience__data bd-grid">
                                 <h3 class="experience__title">Physics Tutor</h3>
-                                <span class="experience__company">Oct 2020 - Mar 2021 | Freelance</span>
+                                <div class="experience__meta"><span class="experience__company">Freelance</span><span class="experience__period">Oct 2020 – Mar 2021</span></div>
                                 <ul class="experience__list">
-                                    <li class="experience__description">
-                                        <span class="experience__circle"></span>
-                                        <div><strong>Teaching: </strong> Remotely planned out a small curriculum and
-                                            tutored for Physics.</div>
-                                    </li>
-                                    <br>
+                                <li class="experience__description"><span class="experience__circle" aria-hidden="true"></span><div><strong>Teaching:</strong> Planned a short physics curriculum and provided remote tutoring.</div></li>
                                 </ul>
                                 <div class="experience__technologies">
-                                    <span>Skill Areas</span>
-                                    <ul class="experience__technologies-list">
-                                        <li class="experience__technologies-item">Physics</li>
+                                    <span>Skills &amp; tools</span>
+                                    <ul class="experience__technologies-list" aria-label="Skills and tools used">
+                                    <li class="experience__technologies-item">Physics</li>
                                     </ul>
                                 </div>
                             </div>
-                        </div>
-
-                        <div class="experience__content">
-                            <div class="experience__time">
+                        </article>
+                        <article class="experience__content">
+                            <div class="experience__time" aria-hidden="true">
                                 <span class="experience__rounder"></span>
                                 <span class="experience__line"></span>
                             </div>
-
                             <div class="experience__data bd-grid">
                                 <h3 class="experience__title">Sales Associate</h3>
-                                <span class="experience__company">Jun 2020 - Aug 2020 | Global Commodities Traders
-                                    Inc.</span>
+                                <div class="experience__meta"><span class="experience__company">Global Commodities Traders Inc.</span><span class="experience__period">Jun 2020 – Aug 2020</span></div>
                                 <ul class="experience__list">
-                                    <li class="experience__description">
-                                        <span class="experience__circle"></span>
-                                        <div><strong>Sales: </strong> Remotely researched and identified buyers of
-                                            products in select
-                                            international markets.</div>
-                                    </li>
-                                    <br>
-                                    <li class="experience__description">
-                                        <span class="experience__circle"></span>
-                                        <div><strong>Sales: </strong> with the buyers to promote the products for sale.
-                                        </div>
-                                    </li>
-                                    <br>
+                                <li class="experience__description"><span class="experience__circle" aria-hidden="true"></span><div><strong>Research:</strong> Identified prospective buyers in selected international markets.</div></li>
+                                <li class="experience__description"><span class="experience__circle" aria-hidden="true"></span><div><strong>Sales:</strong> Communicated with buyers to promote available products.</div></li>
                                 </ul>
                                 <div class="experience__technologies">
-                                    <span>Skill Areas</span>
-                                    <ul class="experience__technologies-list">
-                                        <li class="experience__technologies-item">Sales</li>
-                                        <li class="experience__technologies-item">Microsoft Office
+                                    <span>Skills &amp; tools</span>
+                                    <ul class="experience__technologies-list" aria-label="Skills and tools used">
+                                    <li class="experience__technologies-item">Sales</li>
+                                    <li class="experience__technologies-item">Microsoft Office</li>
                                     </ul>
-
                                 </div>
                             </div>
+                        </article>
                         </div>
+                    </details>
+                </section>
+
+                <section class="experience section" id="volunteering">
+                    <h2 class="section-title">Volunteer Experience</h2>
+                    <div class="experience__container bd-grid">
+                        <article class="experience__content">
+                            <div class="experience__time" aria-hidden="true">
+                                <span class="experience__rounder"></span>
+                                <span class="experience__line"></span>
+                            </div>
+                            <div class="experience__data bd-grid">
+                                <h3 class="experience__title">Student Ambassador</h3>
+                                <div class="experience__meta"><span class="experience__company">Jarvis Consulting Group <a href="https://jrvs.ca/" target="_blank" rel="noopener noreferrer" aria-label="Visit Jarvis Consulting Group website"><i class="bx bx-link external-link" aria-hidden="true"></i></a></span><span class="experience__period">Apr 2023 – Apr 2024</span></div>
+                                <ul class="experience__list">
+                                <li class="experience__description"><span class="experience__circle" aria-hidden="true"></span><div>Led a team of 14 Computer Science and Engineering students in technology events.</div></li>
+                                <li class="experience__description"><span class="experience__circle" aria-hidden="true"></span><div>Worked with development toolkits and teammates to win first place at the Jarvis Ambassador Hackathon.</div></li>
+                                </ul>
+                                <div class="experience__technologies">
+                                    <span>Skills &amp; tools</span>
+                                    <ul class="experience__technologies-list" aria-label="Skills and tools used">
+                                    <li class="experience__technologies-item">HTML</li>
+                                    <li class="experience__technologies-item">CSS</li>
+                                    <li class="experience__technologies-item">JavaScript</li>
+                                    <li class="experience__technologies-item">Bootstrap</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="experience__content">
+                            <div class="experience__time" aria-hidden="true">
+                                <span class="experience__rounder"></span>
+                                <span class="experience__line"></span>
+                            </div>
+                            <div class="experience__data bd-grid">
+                                <h3 class="experience__title">Student Ambassador</h3>
+                                <div class="experience__meta"><span class="experience__company">Microsoft</span><span class="experience__period">Jul 2023 – Dec 2023</span></div>
+                                <ul class="experience__list">
+                                <li class="experience__description"><span class="experience__circle" aria-hidden="true"></span><div>Pursued certifications and technical learning through GitHub, Microsoft Learn, and Microsoft Teams.</div></li>
+                                <li class="experience__description"><span class="experience__circle" aria-hidden="true"></span><div>Participated in learning workshops with other ambassadors and mentors.</div></li>
+                                </ul>
+                                <div class="experience__technologies">
+                                    <span>Skills &amp; tools</span>
+                                    <ul class="experience__technologies-list" aria-label="Skills and tools used">
+                                    <li class="experience__technologies-item">GitHub</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="experience__content">
+                            <div class="experience__time" aria-hidden="true">
+                                <span class="experience__rounder"></span>
+                                <span class="experience__line"></span>
+                            </div>
+                            <div class="experience__data bd-grid">
+                                <h3 class="experience__title">Hackathons &amp; Short-Term Volunteering</h3>
+                                <span class="experience__company">Devpost, York University &amp; Ontario Tech University</span>
+                                <ul class="experience__list">
+                                <li class="experience__description"><span class="experience__circle" aria-hidden="true"></span><div>Participated in five hackathons: E2E Encrypted Everything @Hack ’21, CalHacks 8.0 ’21, McHacks 9.0 ’22, Jarvis Ambassador Hackathon ’23 (first place), and UNHack ’23 (top 8 of 150).</div></li>
+                                <li class="experience__description"><span class="experience__circle" aria-hidden="true"></span><div>Served as a student service volunteer for two semesters at Ontario Tech University.</div></li>
+                                </ul>
+                                <div class="experience__technologies">
+                                    <span>Skills &amp; tools</span>
+                                    <ul class="experience__technologies-list" aria-label="Skills and tools used">
+                                    <li class="experience__technologies-item">HTML</li>
+                                    <li class="experience__technologies-item">CSS</li>
+                                    <li class="experience__technologies-item">JavaScript</li>
+                                    <li class="experience__technologies-item">Bootstrap</li>
+                                    <li class="experience__technologies-item">Python</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </article>
                     </div>
                 </section>
 
-
-                <div class="resume__right">
-                    <!--========== EXPERIENCE ==========-->
-                    <section class="experience section" id="experience">
-                        <h2 class="section-title">Volunteer Experience</h2>
-
-                        <div class="experience__container bd-grid">
-                            <div class="experience__content">
-                                <div class="experience__time">
-                                    <span class="experience__rounder"></span>
-                                    <span class="experience__line"></span>
-                                </div>
-
-                                <div class="experience__data bd-grid">
-                                    <h3 class="experience__title">Student Ambassador</h3>
-                                    <span class="experience__company">Apr 2023 - Apr 2024 | Jarvis Consulting Group<a
-                                            href="https://jrvs.ca/" target="_blank"><i
-                                                class="bx bx-link external-link"></i></a></span>
-                                    <ul class="experience__list">
-                                        <li class="experience__description">
-                                            <span class="experience__circle"></span>
-                                            <div>Leading a team of 14 Computer Science and Engineering students to
-                                                engage in immersive tech-related events.
-                                            </div>
-                                        </li>
-                                        <li class="experience__description">
-                                            <span class="experience__circle"></span>
-                                            <div>Leveraging development toolkits to actively engage in these
-                                                experiences, resulting in a Hackathon win.
-                                            </div>
-                                        </li>
-                                    </ul>
-                                    <div class="experience__technologies">
-                                        <span>Skill Areas</span>
-                                        <ul class="experience__technologies-list">
-                                            <li class="experience__technologies-item">HTML</li>
-                                            <li class="experience__technologies-item">CSS</li>
-                                            <li class="experience__technologies-item">JavaScript</li>
-                                            <li class="experience__technologies-item">Bootstrap</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="experience__container bd-grid">
-                                <div class="experience__content">
-                                    <div class="experience__time">
-                                        <span class="experience__rounder"></span>
-                                        <span class="experience__line"></span>
-                                    </div>
-
-                                    <div class="experience__data bd-grid">
-                                        <h3 class="experience__title">Student Ambassador</h3>
-                                        <span class="experience__company">Jul 2023 - Dec 2023 |
-                                            Microsoft<a></i></a></span>
-                                        <ul class="experience__list">
-                                            <li class="experience__description">
-                                                <span class="experience__circle"></span>
-                                                <div>Actively pursuing a diverse range of certifications using platforms
-                                                    such as Github, MSLearn and Microsoft Teams.
-                                                </div>
-                                            </li>
-                                            <li class="experience__description">
-                                                <span class="experience__circle"></span>
-                                                <div>Collaborated with other ambassadors and mentors by taking part in
-                                                    learning workshops.
-                                                </div>
-                                            </li>
-                                        </ul>
-                                        <div class="experience__technologies">
-                                            <span>Skill Areas</span>
-                                            <ul class="experience__technologies-list">
-                                                <li class="experience__technologies-item">Github</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="experience__container bd-grid">
-                                    <div class="experience__content">
-                                        <div class="experience__time">
-                                            <span class="experience__rounder"></span>
-                                            <span class="experience__line"></span>
-                                        </div>
-                                        <div class="experience__data bd-grid">
-                                            <h3 class="experience__title">Hackathon Participant & Other Short Term
-                                                Volunteering</h3>
-                                            <span class="experience__company">Devpost, York University, Ontario Tech
-                                                University<i></i></a></span>
-                                            <ul class="experience__list">
-                                                <li class="experience__description">
-                                                    <span class="experience__circle"></span>
-                                                    <div>Took part in 5 Hackathons: E2E Encrypted Everything @Hack '21,
-                                                        CalHacks 8.0 '21, McHacks 9.0 '22, Jarvis Ambassador Hackathon
-                                                        '23 (won 1st place), UNHack '23 (Top 8 / 150).
-                                                    </div>
-                                                </li>
-                                                <li class="experience__description">
-                                                    <span class="experience__circle"></span>
-                                                    <div>Student Service Volunteer for 2 Semesters at Ontario Tech
-                                                        University.
-                                                    </div>
-                                                </li>
-                                            </ul>
-                                            <div class="experience__technologies">
-                                                <span>Skill Areas</span>
-                                                <ul class="experience__technologies-list">
-                                                    <li class="experience__technologies-item">HTML</li>
-                                                    <li class="experience__technologies-item">CSS</li>
-                                                    <li class="experience__technologies-item">JavaScript</li>
-                                                    <li class="experience__technologies-item">Bootstrap</li>
-                                                    <li class="experience__technologies-item">Python</li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-
-
-
-
-
-
-
-                                </div>
-                    </section>
-
-                    <section class="languages section">
-                        <h3 class="section-title">Projects</h3>
-
-                        <div class="languages__container">
-                            <ul class="languages__content bd-grid">
-                                <li class="languages__name">
-                                    <span class="languages__circle"></span>
-                                    <p>Check out <a href="https://abrartarafder.github.io/portfolio-short/"
-                                            class="portfolio-link">My Portfolio Website</a> for all the Projects I have
-                                        worked on and their descriptions.</p>
-                                </li>
-                            </ul>
-                        </div>
-                    </section>
-
-
+                <section class="projects section" id="projects">
+                    <h2 class="section-title">Projects</h2>
+                    <p>Explore my <a href="https://abrartarafder.github.io/portfolio-short/" target="_blank" rel="noopener noreferrer" class="portfolio-link">project portfolio <i class="bx bx-link-external" aria-hidden="true"></i></a> for project descriptions and examples of my work.</p>
+                </section>
 
                     <!--========== CERTIFICATES ==========-->
                     <section class="certificate section" id="certificates">
@@ -1081,7 +571,7 @@
 
                             <div class="certificate__content bd-grid">
                                 <h3 class="certificate__title">Google Data Analytics Certificate</h3>
-                                <span class="certificate__company">Nov 2020 | Coursera</span>
+                                <span class="certificate__company">Mar 2023 | Coursera</span>
                             </div>
 
                             <div class="certificate__content bd-grid">
@@ -1109,8 +599,8 @@
                         </div>
                     </section>
 
-                    <section class="certificate section" id="certificates">
-                        <h2 class="section-title">Relevant Courses Completed</h2>
+                    <section class="certificate section" id="courses">
+                        <h2 class="section-title">Relevant Coursework</h2>
 
                         <div class="certificate__container bd-grid bd-grid-2">
 
@@ -1145,12 +635,12 @@
                             </div>
 
                             <div class="certificate__content bd-grid">
-                                <h3 class="certificate__title">Advanced Object Oriented Programming</h3>
+                                <h3 class="certificate__title">Advanced Object-Oriented Programming</h3>
                                 <span class="certificate__company">York University</span>
                             </div>
 
                             <div class="certificate__content bd-grid">
-                                <h3 class="certificate__title">Intro to Object Oriented Programming</h3>
+                                <h3 class="certificate__title">Intro to Object-Oriented Programming</h3>
                                 <span class="certificate__company">York University</span>
                             </div>
 
@@ -1211,74 +701,11 @@
 
                         </div>
                     </section>
-
-                    <!--========== LANGUAGES ==========-->
-                    <section class="languages section">
-                        <h3 class="section-title">Languages</h3>
-
-                        <div class="languages__container">
-                            <ul class="languages__content bd-grid">
-                                <li class="languages__name">
-                                    <span class="languages__circle"></span> English (Native proficiency)
-                                </li>
-                                <li class="languages__name">
-                                    <span class="languages__circle"></span> Bengali (Native proficiency)
-                                </li>
-                                <li class="languages__name">
-                                    <span class="languages__circle"></span> Arabic (Basic proficiency)
-                                </li>
-                                <li class="languages__name">
-                                    <span class="languages__circle"></span> Hindi/Urdu (Basic proficiency)
-                                </li>
-                            </ul>
-                        </div>
-                    </section>
-
-                    <!--========== INTERESTS ==========-->
-                    <section class="interests section">
-                        <h2 class="section-title">Interests</h2>
-
-                        <div class="interests__container bd-grid">
-                            <div class="interests__content">
-                                <i class="bx bx-camera interests__icon"></i>
-                                <span class="interests__name">Photography</span>
-                            </div>
-
-                            <div class="interests__content">
-                                <i class="bx bxs-plane-alt interests__icon"></i>
-                                <span class="interests__name">Travel</span>
-                            </div>
-
-                            <div class="interests__content">
-                                <i class="bx bx-game interests__icon"></i>
-                                <span class="interests__name">Gaming</span>
-                            </div>
-                            <div class="interests__content">
-                                <i class='bx bx-dumbbell interests__icon'></i>
-                                <span class="interests__name">Fitness</span>
-                            </div>
-                            <div class="interests__content">
-                                <i class='bx bx-ball interests__icon'></i>
-                                <span class="interests__name">Sports</span>
-                            </div>
-
-                        </div>
-                    </section>
-                </div>
             </div>
-            <p class="updated">Updated: April 2025</p>
+        </div>
+        <p class="updated">Updated <time datetime="2026-11-12">November 2026</time></p>
     </main>
-
-    <!--========== SCROLL TOP ==========-->
-    <a href="#" class="scrolltop" id="scroll-top">
-        <i class='bx bx-up-arrow-alt scrollttop__icon'></i>
-    </a>
-
-    <!--========== HTML2PDF ==========-->
-    <!-- <script src="assets/js/html2pdf.bundle.min.js"></script> -->
-
-    <!--========== MAIN JS ==========-->
+    <a href="#home" class="scrolltop" id="scroll-top" aria-label="Back to top"><i class="bx bx-up-arrow-alt scrolltop__icon" aria-hidden="true"></i></a>
     <script src="assets/js/main.js"></script>
 </body>
-
 </html>
